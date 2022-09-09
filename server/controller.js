@@ -7,12 +7,46 @@ module.exports = {
          console.log(req.body)
          
          const {pin, message} = req.body
-         const messages = {
+         const test = {
             pin, message
          }
-         res.status(200).send(messages)
+         res.status(200).send(test)
 
 
+        // for(let i = 0; i < chats.length; i++){
+        //     const existingPin = bcrypt.compare(pin, chats[i].pinHash)
+            
+        //     if(existingPin){
+        //         chats[i].message.push(message)
+
+        //         let existingSecureMessage = {...chats[i]}
+        //         delete existingSecureMessage.pinHash
+
+        //         return res.status(200).send(existingSecureMessage)
+        //     }
+        // }
+
+        // // console.log(message)
+        
+        // //create salt and hash
+        // const salt = bcrypt.genSaltSync(5)
+        // const pinHash = bcrypt.hashSync(pin, salt)
+        
+        // // console.log(pin)
+        // // console.log(salt)
+        // // console.log(pinHash)
+
+        // let msgObj = {
+        //     pinHash,
+        //     message: [message]
+        // }
+
+        // chats.push(msgObj)
+
+        // let securedMessage = {...msgObj}
+        // delete securedMessage.pinHash
+
+        // res.status(200).send(msgObj)
 
     }
 }
